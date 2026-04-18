@@ -105,20 +105,22 @@ export default function InvoiceBuilder() {
             {isEdit ? `Edit ${invoice.invoiceNumber}` : 'New Invoice'}
           </h1>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button 
             onClick={handleDownload}
-            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors font-medium border border-slate-200 dark:border-slate-700"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors font-medium border border-slate-200 dark:border-slate-700"
+            title="Download PDF"
           >
             <Download className="w-4 h-4" />
-            Download PDF
+            <span className="hidden sm:inline">Download PDF</span>
           </button>
           <button 
             onClick={handleSave}
-            className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors font-medium cursor-pointer"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors font-medium cursor-pointer"
           >
             <Save className="w-4 h-4" />
-            Save Invoice
+            <span className="hidden sm:inline">Save Invoice</span>
+            <span className="sm:hidden">Save</span>
           </button>
         </div>
       </div>
